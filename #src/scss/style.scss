@@ -8,10 +8,57 @@ html {
 }
 
 body {
-  font-size: 1.4rem;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 4rem;
   font-weight: 400;    
-  line-height: 1.8rem;
+  line-height: 4.2rem;
+  color: $white;
 }
+
+/* GLOBAL */
+
+.titel {
+  @include font(800, 8rem, 8.6rem);
+  text-transform: uppercase;
+  text-align: right;
+
+  &_2 {
+    @include font(800, 4rem, 4.6rem);
+    text-transform: uppercase;
+    text-align: right;
+  }
+}
+
+.subtitel_left,
+.subtitel_right {
+  position: relative;
+  @include font(400, 2.2rem, 3.2rem);
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  text-align: right;
+  opacity: 0.5;
+
+  &::before {
+    content: "";
+    height: 1px;
+    width: 80px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.5;
+    background-color: #fff;
+  }
+}
+
+.subtitel_left::before {
+  left: -100px;
+}
+
+.subtitel_right::before {
+  right: -100px;
+}
+
 
 @import 'sections/header';
 

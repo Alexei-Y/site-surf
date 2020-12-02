@@ -1,4 +1,4 @@
-//SWIPER
+/* SWIPER */
 
 .swiper-container {
   height: 100vh;
@@ -13,4 +13,49 @@
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.swiper-button-next {
+  top: 15%;
+  right: 5%;
+}
+
+.swiper-button-prev {
+  top: 15%;
+  right: 8%;
+  left: auto;
+}
+
+/* SLIDE */
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 5;
+  background: radial-gradient(62.09% 64.09% at 44.87% 42.23%, rgba(34, 34, 34, 0.30) 0%, rgba(10, 10, 10, 0.92) 100%);
+
+  //wrapper
+  &__wrapper {
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+    text-align: right;
+  }
+
+  &__titel {
+    margin-top: 10px;
+  }
+
+  &__subtext {
+    margin-top: 35px;
+  }
+
+  &__text {
+    margin-top: 10px;
+  }
+
+  &__link {
+    margin-top: 10px;
+  }
 }
