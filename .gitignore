@@ -1,0 +1,7 @@
+*.fig
+
+*.loge
+
+/dist
+
+/node_modules

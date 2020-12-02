@@ -1,0 +1,18 @@
+@import 'base/null';
+@import 'base/variables';
+@import 'base/mixin';
+
+/*MAIN CLASS LIST*/
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.4rem;
+  font-weight: 400;    
+  line-height: 1.8rem;
+}
+
+@import 'sections/header';
+
+
