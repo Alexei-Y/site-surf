@@ -15,16 +15,74 @@
   left: 0;
 }
 
+//navigation arrows
+.swiper-button-next,
+.swiper-button-prev {
+  height: 45px;
+  width: 45px;
+  top: 10%;
+
+  &::after {
+    content: "";
+  }
+}
 .swiper-button-next {
-  top: 15%;
   right: 5%;
 }
 
 .swiper-button-prev {
-  top: 15%;
   right: 8%;
   left: auto;
 }
+
+/* pagination */
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  right: 5%;
+  left: auto;
+  bottom: 4%;
+}// fix default value
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0;
+  margin-left: 40px;
+}// fix default value
+
+.swiper-pagination {
+  text-align: right;
+  counter-reset: bullets;
+
+  //SPAN SHROE NAME
+  &-span {
+    position: absolute;
+    right: 5px;
+    top: 15px;
+    @include font(300, 1.8rem, 2.0rem);
+  }
+
+  &-bullet {
+    position: relative;
+    width: 200px;
+    height: 4px;
+    margin: 0 20px;
+    border-radius: 0;
+    background-color: $white;
+
+    &::before {
+      counter-increment: bullets;
+      content: "0" counter(bullets);
+      position: absolute;
+      left: 5px;
+      top: 10px;
+      @include font(800, 2.4rem, 2.6rem);
+    }
+
+    &-active {
+      background-color: $primary;
+    }
+  }
+}
+
+
 
 /* SLIDE */
 
@@ -39,7 +97,7 @@
   &__wrapper {
     position: absolute;
     right: 5%;
-    bottom: 10%;
+    bottom: 12%;
     text-align: right;
   }
 
