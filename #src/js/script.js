@@ -3,9 +3,12 @@ const mySwiper = new Swiper('.swiper-container', {
   direction: 'horizontal',
   loop: true,
   effect: 'fade',
-  speed: 800,
-  
+  speed: 1000,
 
+  autoplay: {
+    delay: 5000,
+  },
+  
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
