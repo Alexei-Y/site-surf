@@ -152,6 +152,21 @@
   left: 0;
 }
 
+.swiper-map {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 6;
+  width: 45%;
+}
+
+.swiper-arrow {
+  position: absolute;
+  bottom: 4%;
+  left: 11%;
+  z-index: 6;
+}
+
 //navigation arrows
 .swiper-button-next,
 .swiper-button-prev {
