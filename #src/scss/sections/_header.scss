@@ -25,6 +25,7 @@
     justify-content: space-between;
     max-width: 168px;
     height: 100vh;
+    min-height: $min-height;
     position: absolute;
     left: 0;
     top: 0;
@@ -140,11 +141,13 @@
 /* SWIPER */
 .swiper-container {
   height: 100vh;
+  min-height: $min-height;
   width: 100%;
 }
 
 .swiper-img img {
   height: 100vh;
+  min-height: $min-height;
   width: 100%;
   object-fit: cover;
   z-index: 1;
@@ -165,7 +168,7 @@
 .animate__line {
   stroke-dashoffset: 600;
   stroke-dasharray: 600;
-  animation: anim-line 3s 5s infinite;
+  animation: anim-line 5s 6s infinite;
 }
 
 // Выделить под анимации
@@ -271,7 +274,12 @@
   }
 
   &__titel {
+    position: relative;
     margin-top: 10px;
+
+    &::before {
+      content: none;
+    }
   }
 
   &__subtext {

@@ -6,7 +6,7 @@ const mySwiper = new Swiper('.swiper-container', {
   speed: 1000,
 
   autoplay: {
-    delay: 8000,
+    delay: 10000,
   },
   
   // If we need pagination

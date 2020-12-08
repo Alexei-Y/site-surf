@@ -14,19 +14,42 @@ body {
   font-weight: 400;    
   line-height: 4.2rem;
   color: $white;
+  background-color: #171919;
 }
 
 /* GLOBAL */
 
 .titel {
+  position: absolute;
+  top: -15%;
+  right: -5%;
   @include font(800, 8rem, 8.6rem);
   text-transform: uppercase;
-  text-align: right;
+  color: $white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 1px;
+    background-color: $primary;
+  }
+
+  &__bg {
+    display: inline-block;
+    position: relative;
+    @include font(800, 20rem, 15rem);
+    text-transform: uppercase;
+    transform: translateX(-12%);
+    user-select: none;
+    color: rgba($color: #FFFFFF, $alpha: 0.02);
+  }
 
   &_2 {
     @include font(800, 4rem, 4.6rem);
     text-transform: uppercase;
-    text-align: right;
   }
 }
 
@@ -62,5 +85,6 @@ body {
 
 
 @import 'sections/header';
+@import 'sections/s1-surf';
 
 
